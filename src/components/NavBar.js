@@ -4,16 +4,15 @@ import logo from '../assets/img/DylanOcampo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 
-import { AwesomeButton } from "react-awesome-button";
+import Button from 'react-bootstrap/Button';
 
-
-
-import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
 
 export const NavBar = () => {
+
+  let Language = false;
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -37,8 +36,8 @@ export const NavBar = () => {
   }
 
   return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Router  >
+      <Navbar expand="md" className={scrolled ? "scrolled" : ""} >
         <Container>
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" />
@@ -47,6 +46,8 @@ export const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+            </Nav>
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>

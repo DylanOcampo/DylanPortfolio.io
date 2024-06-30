@@ -20,6 +20,9 @@ const gitLinks = [ "https://github.com/DylanOcampo/Beyond-The-Federation", "Full
 const PitchDeck = [ "https://www.canva.com/design/DAF1zcxLcwI/_0AZ_i4GmG2gHTs0JA-N3g/view?utm_content=DAF1zcxLcwI&utm_campaign=designshare&utm_medium=link&utm_source=editor#1", "https://www.canva.com/design/DAFLe2J6_HA/vVsa-O2RbLlzRLxPNc9atA/view?utm_content=DAFLe2J6_HA&utm_campaign=designshare&utm_medium=link&utm_source=editor", "Technical Artist" ]; 
 
 
+
+
+
 return (
     <div className="skill" id="skills">
         <div className="container" style = {{ justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
@@ -31,7 +34,7 @@ return (
             <div className="center">
             
             <Row style={{marginBottom: 30}}>
-                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal"}}>{Descriptions[num]}</h4></Col>
+                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30}}>{Descriptions[num]}</h4></Col>
                 <Col> <img src={gifs[num]} alt="loading..." /></Col>
             </Row>
 
@@ -61,14 +64,6 @@ return (
                     </Row></div>
                     </Col>
                 </Row>
-
-
-            
-
-            
-    
-                
-              
             </div>
         </div>
     </div>

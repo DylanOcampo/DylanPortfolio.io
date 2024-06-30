@@ -57,8 +57,8 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Dylan a `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Game Developer", "FullStack Developer", "Technical Artist" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Detail-oriented and adaptable Game Programmer with experience in multiplayer gaming systems and a background in 3D art, and animation. Skilled in enhancing user experiences and developing user-oriented apps. Looking for opportunities to contribute to game and mobile development projects using my knowledge in art and animation pipeline to enhance my programming skills.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <p>Detail-oriented and adaptable Developer with experience in gamified apps and a background in 3D art, and animation. Skilled in enhancing user experiences and developing user-oriented apps. Looking for opportunities to contribute to game and mobile development projects using my knowledge in art and animation pipeline to enhance my programming skills.</p>
+                  <button onclick="window.open('dylanomar@live.com.mx');">Email Me <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
