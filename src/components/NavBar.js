@@ -4,7 +4,6 @@ import logo from '../assets/img/DylanOcampo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 
-import Button from 'react-bootstrap/Button';
 
 import {
   BrowserRouter as Router
@@ -12,7 +11,6 @@ import {
 
 export const NavBar = () => {
 
-  let Language = false;
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
