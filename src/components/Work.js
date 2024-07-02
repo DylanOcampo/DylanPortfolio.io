@@ -29,7 +29,7 @@ return (
         <img 
                 src={Logos[num]}
                 alt="loading..." 
-                style={{ width: 'auto', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
+                style={{ width: '50%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
       />
             <div className="center">
         <BrowserView> 
@@ -67,37 +67,37 @@ return (
         </BrowserView>  
             </div>
 
-        <MobileView>
+        <MobileView style={{justifyContent: 'center', alignItems: 'center'}}>
             
                 <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
                 <Col> <img src={gifs[num]} alt="loading..."  style={{width: '20', height: 'auto', justifyContent: 'center', alignItems: 'center'}}/></Col>
             
 
             
-                <Col>
-                    <div><Row>
-                    <Col ></Col>
-                    <Col > <h1>Project Repository</h1>  </Col>
-                    <Col> <div className="work-icon"><a  href={gitLinks[num]}><img src={github} alt="" /></a></div></Col>
-                    </Row></div>
-                </Col>
+                
+                    <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: "center"}} >
+                    
+                     <h1>Project Repository</h1>  
+                     <div className="work-icon" style={{ marginBottom: "20"}}><a  href={gitLinks[num]}><img src={github} alt="" /></a></div>
+                    </div>
+                
 
 
-                <Col>
-                    <div><Row>
-                    <Col></Col>
-                    <Col > <h1>Documents</h1></Col>
-                    <Col> <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
-                    </Row></div>
-                </Col>
+                
+                    <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: "center"}} >
+                    
+                    <h1>Documents</h1>
+                    <div className="work-icon" style={{ marginBottom: "20"}}><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div>
+                    </div>
+                
 
-                <Col>
-                    <div><Row>
-                    <Col ></Col>
-                    <Col > <h1>Pitch Deck</h1></Col>
-                    <Col> <div className="work-icon"><a  href={PitchDeck[num]}><img src={pitchdeck} alt="" style={{ width: '60%'}}/></a></div></Col>
-                    </Row></div>
-                    </Col>
+                
+                    <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: "center"}} >
+                    
+                     <h1>Pitch Deck</h1>
+                     <div className="work-icon" style={{ marginBottom: "20"}}><a  href={PitchDeck[num]}><img src={pitchdeck} alt="" style={{ width: '60%' }}/></a></div>
+                    </div>
+                    
                 
         </MobileView>
         

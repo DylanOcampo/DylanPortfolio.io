@@ -34,9 +34,10 @@ export const NavBar = () => {
   }
 
   return (
+    <div style={{width: 'auto', height: 'auto', justifyContent: 'center', alignItems: 'center'}}>
     <Router  >
       <Navbar expand="md" className={scrolled ? "scrolled" : ""} >
-        <Container>
+        <Container >
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
@@ -68,5 +69,6 @@ export const NavBar = () => {
         </Container>
       </Navbar>
     </Router>
+    </div>
   )
 }

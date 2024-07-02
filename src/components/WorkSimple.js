@@ -67,10 +67,10 @@ return (
       <MobileView>
         <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
             <>{elementWork}</>
-
-            <Col> <h1>Links</h1></Col>
-            <Col > <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
-                        
+            <div style={{ justifyContent: 'center', alignItems: 'center', textAlign: "center"}} >
+            <h1>Links</h1>
+            <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div>
+            </div>           
       </MobileView>
 
         </div>
