@@ -1,4 +1,4 @@
-
+import {BrowserView, MobileView} from 'react-device-detect';
 import file from "../assets/img/Logo_Files.svg";
 
 import Row from 'react-bootstrap/Row';
@@ -33,34 +33,46 @@ const gifs = [ "a", Funkos, "KgK0GhQ5yWA", Yucatani6, Vicente  ];
 const doclinks = [ "a", "https://www.artstation.com/dylan-ocampo", "https://play.google.com/store/apps/details?id=com.rckgames.axess&hl=es_SV&pli=1", "https://play.google.com/store/apps/details?id=com.rckgames.yucatani6&hl=es", "https://vicenteaniversario.com/"];
 
 if(num === 2) {
-    elementWork = <Col><YoutubeEmbed embedId = {gifs[num]} /></Col>
+    elementWork = <Col><YoutubeEmbed embedId = {gifs[num]} style={{width: '100%', height: 'auto', justifyContent: 'center', alignItems: 'center'}} /></Col>
 }else{
-    elementWork = <Col> <img src={gifs[num]} alt="loading..." /></Col>
+    elementWork = <Col> <img src={gifs[num]} alt="loading..." style={{width: '100%', height: 'auto', justifyContent: 'center', alignItems: 'center', overflowX: "auto"}} /></Col>
 }
 
 
+
 return (
-    <div className="skill" id="skills">
-        <div className="container" style = {{ justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
+    <div className="skill" id="skills" style={{tableLayout: "auto", display: "flex",}}>
+        <div className="container" style = {{ justifyContent: 'center', alignItems: 'center', height: 'auto' , marginTop: 20, flexDirection: "row", marginBottom: 20,}}>
         <img 
                 src={Logos[num]}
                 alt="loading..." 
-                style={{ width: '30%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
+                style={{ width: "50%", overflowX: "auto", height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
       />
-            <div className="center">
+      <BrowserView>
+        <div className="center">
+                
+                <Row style={{marginBottom: 30}}>
+                    <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
+                    <>{elementWork}</>
+                </Row>
+                <div><Row>
+                        <Col></Col>
+                        <Col> <h1>Links</h1></Col>
+                        <Col > <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
+                        </Row></div>
 
-            <Row style={{marginBottom: 30}}>
-                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30}}>{Descriptions[num]}</h4></Col>
-                <>{elementWork}</>
-            </Row>
-            <div><Row>
-                    <Col></Col>
-                    <Col xs={1}> <h1>Links</h1></Col>
-                    <Col xs={6}> <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
-                    </Row></div>
 
+        </div>
+      </BrowserView>
+      <MobileView>
+        <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
+            <>{elementWork}</>
 
-            </div>
+            <Col> <h1>Links</h1></Col>
+            <Col > <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
+                        
+      </MobileView>
+
         </div>
     </div>
     

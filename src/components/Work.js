@@ -1,4 +1,4 @@
-
+import {BrowserView, MobileView} from 'react-device-detect';
 import github from "../assets/img/github.png";
 import file from "../assets/img/Logo_Files.svg";
 import pitchdeck from "../assets/img/pitchdeck.png";
@@ -24,18 +24,18 @@ const PitchDeck = [ "https://www.canva.com/design/DAF1zcxLcwI/_0AZ_i4GmG2gHTs0JA
 
 
 return (
-    <div className="skill" id="skills">
-        <div className="container" style = {{ justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
+    <div className="skill" id="skills" style={{tableLayout: "auto", display: "flex",}}>
+        <div className="container" style = {{ justifyContent: 'center', alignItems: 'center', height: 'auto' , marginTop: 20}}>
         <img 
                 src={Logos[num]}
                 alt="loading..." 
-                style={{ width: '30%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
+                style={{ width: 'auto', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} 
       />
             <div className="center">
-            
+        <BrowserView> 
             <Row style={{marginBottom: 30}}>
-                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30}}>{Descriptions[num]}</h4></Col>
-                <Col> <img src={gifs[num]} alt="loading..." /></Col>
+                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
+                <Col> <img src={gifs[num]} alt="loading..."  style={{width: '20', height: 'auto', justifyContent: 'center', alignItems: 'center'}}/></Col>
             </Row>
 
             <Row >
@@ -64,7 +64,43 @@ return (
                     </Row></div>
                     </Col>
                 </Row>
+        </BrowserView>  
             </div>
+
+        <MobileView>
+            
+                <Col><h4 style={{textAlign: 'justify', fontWeight: "normal", paddingRight: 30, fontSize: "auto"}}>{Descriptions[num]}</h4></Col>
+                <Col> <img src={gifs[num]} alt="loading..."  style={{width: '20', height: 'auto', justifyContent: 'center', alignItems: 'center'}}/></Col>
+            
+
+            
+                <Col>
+                    <div><Row>
+                    <Col ></Col>
+                    <Col > <h1>Project Repository</h1>  </Col>
+                    <Col> <div className="work-icon"><a  href={gitLinks[num]}><img src={github} alt="" /></a></div></Col>
+                    </Row></div>
+                </Col>
+
+
+                <Col>
+                    <div><Row>
+                    <Col></Col>
+                    <Col > <h1>Documents</h1></Col>
+                    <Col> <div className="work-icon"><a  href={doclinks[num]}><img src={file} alt="" style={{ width: '60%'}}/></a></div></Col>
+                    </Row></div>
+                </Col>
+
+                <Col>
+                    <div><Row>
+                    <Col ></Col>
+                    <Col > <h1>Pitch Deck</h1></Col>
+                    <Col> <div className="work-icon"><a  href={PitchDeck[num]}><img src={pitchdeck} alt="" style={{ width: '60%'}}/></a></div></Col>
+                    </Row></div>
+                    </Col>
+                
+        </MobileView>
+        
         </div>
     </div>
     

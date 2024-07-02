@@ -45,23 +45,23 @@ export const Skills = () => {
           <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
             <Row>
-              <Col md={2}><img src={unity} alt = ""/> <h3>Unity</h3>
+              <Col><img src={unity} alt = ""/> <h3>Unity</h3>
               </Col>
-              <Col md={2} ><img src={unreal} alt = ""/><h3>Unreal</h3></Col>
-              <Col md={2} ><img src={adobe} alt = ""/><h3>Adobe</h3></Col>
-              <Col md={2}><img src={blender} alt = ""/> <h3>Blender</h3></Col>
-              <Col md={2} ><img src={maya} alt = ""/> <h3>Maya</h3></Col>
-              <Col md={2} ><img src={python} alt = ""/><h3>Python</h3></Col>
+              <Col><img src={unreal} alt = ""/><h3>Unreal</h3></Col>
+              <Col><img src={adobe} alt = ""/><h3>Adobe</h3></Col>
+              <Col><img src={blender} alt = ""/> <h3>Blender</h3></Col>
+              <Col><img src={maya} alt = ""/> <h3>Maya</h3></Col>
+              <Col><img src={python} alt = ""/><h3>Python</h3></Col>
               
               
             </Row>
             <Row>
-            <Col md={2}><img src={HTML} alt = ""/><h3>HTML</h3></Col>
-              <Col md={2}><img src={CSS} alt = ""/><h3>CSS</h3></Col>
-              <Col md={2}><img src={JavaScript} alt = ""/><h3>JavaScript</h3></Col>
-              <Col md={2}><img src={ReactImg} alt = ""/><h3>React</h3></Col>
-              <Col md={2} ><img src={Node} alt = ""/><h3>Node</h3></Col>
-              <Col md={2} ><img src={GitHub} alt = ""/><h3>Github</h3></Col>
+            <Col><img src={HTML} alt = ""/><h3>HTML</h3></Col>
+              <Col><img src={CSS} alt = ""/><h3>CSS</h3></Col>
+              <Col><img src={JavaScript} alt = ""/><h3>JavaScript</h3></Col>
+              <Col><img src={ReactImg} alt = ""/><h3>React</h3></Col>
+              <Col><img src={Node} alt = ""/><h3>Node</h3></Col>
+              <Col><img src={GitHub} alt = ""/><h3>Github</h3></Col>
             </Row>
             
           </div>

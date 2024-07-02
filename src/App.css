@@ -22,6 +22,19 @@
   box-sizing: border-box;
 }
 
+.Column,
+Row {
+  display: flex;
+}
+
+.Row {
+  flex-direction: row;
+}
+
+.Column {
+  flex-direction: column;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
@@ -74,8 +87,18 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+.container{
+  flex-direction: row;
+}
+
+@media(max-width: 600px){
+  .container{
+    flex-direction: column;
+  }
+}
+
 @media (min-width:1700px) {
-	main .container {
+	main .container { 
 		max-width: 100%;
 		padding: 0 150px;
 	}
