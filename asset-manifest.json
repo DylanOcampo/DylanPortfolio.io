@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DylanPortfolio.io/static/css/main.1be0590e.css",
-    "main.js": "/DylanPortfolio.io/static/js/main.3241a4d4.js",
+    "main.js": "/DylanPortfolio.io/static/js/main.94540ef7.js",
     "static/js/453.b21437c2.chunk.js": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js",
     "static/media/BeyondTheFederation.gif": "/DylanPortfolio.io/static/media/BeyondTheFederation.99750300f27b0cb77c8b.gif",
     "static/media/BeyondLogo.gif": "/DylanPortfolio.io/static/media/BeyondLogo.394ce03574e20956a653.gif",
@@ -38,11 +38,11 @@
     "index.html": "/DylanPortfolio.io/index.html",
     "static/media/nav-icon1.svg": "/DylanPortfolio.io/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "main.1be0590e.css.map": "/DylanPortfolio.io/static/css/main.1be0590e.css.map",
-    "main.3241a4d4.js.map": "/DylanPortfolio.io/static/js/main.3241a4d4.js.map",
+    "main.94540ef7.js.map": "/DylanPortfolio.io/static/js/main.94540ef7.js.map",
     "453.b21437c2.chunk.js.map": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1be0590e.css",
-    "static/js/main.3241a4d4.js"
+    "static/js/main.94540ef7.js"
   ]
 }
