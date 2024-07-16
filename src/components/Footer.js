@@ -14,14 +14,17 @@ export const Footer = () => {
         <Row  >
           
           <Col >
-            <img src={logo} alt="Logo" style={{ width: '100%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20, paddingLeft: 5}} />
+            <img src={logo} alt="Logo" style={{ width: '75%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} />
           </Col>
           
-          <Col className="text-center text-sm-end" style={{paddingTop: 10}}><Button variant="light"  onclick="window.open('dylanomar@live.com.mx');">Email Me!</Button></Col>
+          <Col >
+            
+          </Col>
+
           <Col   className="text-center text-sm-end" style={{paddingTop: 10}}>
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
+              <a href="https://www.linkedin.com/in/dylan-ocampo-1849b3240/"><img src={navIcon1} alt="Icon" /></a>
+              <a href="https://www.artstation.com/dylan-ocampo"><img src={navIcon2} alt="Icon" /></a>
             </div>
             <p style ={{paddingTop: 10}}>Copyright 2022. All Rights Reserved</p>
           </Col>
@@ -35,7 +38,6 @@ export const Footer = () => {
             <img src={logo} alt="Logo" style={{ width: '100%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20, paddingLeft: 5}} />
           </Col>
 
-          <Col className="text-center text-sm-end" style={{paddingTop: 10}}><Button variant="light"  onclick="window.open('dylanomar@live.com.mx');">Email Me!</Button></Col>
           <Col   className="text-center text-sm-end" style={{paddingTop: 10}}>
             <div className="social-icon">
               <a href="#"><img src={navIcon1} alt="Icon" /></a>
