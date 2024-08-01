@@ -19,7 +19,7 @@ import Moviegif from "../assets/Work/MovieV.gif";
 
 const BeyondTheFederationDescription = "During my last semester of university, I developed a project with my teammates, the objective was to simulate the development of a video game with the objective of making a vertical slice, for 6 months. In this project I had the role of Lead Programmer, coordinating with another colleague to develop the game systems and ensure an appropriate connection between them. The objective was to create a game with the aesthetics of Paper Mario that would combine platforming and later on detective game mechanics."
 const ScapeDescription = "I'm currently working on this game, Scape. Which is a modification of a card game called Escape. I used to play this game with my friends in high school, we modified it and added rules to make it more fun. Currently you can play against the computer, I will continue working on this game to add Multiplayer, Vfx, Skins and a user system. Scape has been in development since Winter 2023, is developed in Unity.";
-const MovieDescription = "At the beginning of my master's degree I had to develop a project that would replicate the functionality of Netflix. Helping to develop my knowledge in web development and BackEnd. This project is developed in React using the TMDB API.";
+const MovieDescription = "At the beginning of my master's degree I had to develop a project that would replicate the functionality of Netflix. Helping to develop my knowledge in web development. This project is developed in React using the TMDB API.";
 export const Work = ({ num }) => {
 
     let titleHelper = "Pitch Deck"
