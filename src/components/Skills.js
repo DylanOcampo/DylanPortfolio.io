@@ -40,12 +40,12 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="skill" id="skills" >
         <div className="container">
           <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
             <Row>
-              <Col><img src={unity} alt = ""/> <h3>Unity</h3>
+              <Col><img src={unity}  alt = ""/> <h3>Unity</h3>
               </Col>
               <Col><img src={unreal} alt = ""/><h3>Unreal</h3></Col>
               <Col><img src={adobe} alt = ""/><h3>Adobe</h3></Col>

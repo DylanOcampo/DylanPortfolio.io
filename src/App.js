@@ -5,6 +5,7 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Footer } from './components/Footer';
+import { RecentProject } from './components/RecentProject';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <RecentProject></RecentProject>
       <Projects />
       <Footer />
     </div>
