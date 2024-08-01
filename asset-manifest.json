@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/DylanPortfolio.io/static/css/main.1be0590e.css",
-    "main.js": "/DylanPortfolio.io/static/js/main.7bfd7bbb.js",
+    "main.js": "/DylanPortfolio.io/static/js/main.4d2976b8.js",
     "static/js/453.b21437c2.chunk.js": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js",
+    "static/media/MovieV.gif": "/DylanPortfolio.io/static/media/MovieV.8c8f6e546fd7a2b0f165.gif",
+    "static/media/Scape.gif": "/DylanPortfolio.io/static/media/Scape.db468eacc2cb2860605b.gif",
     "static/media/BeyondTheFederation.gif": "/DylanPortfolio.io/static/media/BeyondTheFederation.99750300f27b0cb77c8b.gif",
     "static/media/BeyondLogo.gif": "/DylanPortfolio.io/static/media/BeyondLogo.394ce03574e20956a653.gif",
     "static/media/Principal.png": "/DylanPortfolio.io/static/media/Principal.f5ae6101625633f4e7b7.png",
     "static/media/color-sharp2.png": "/DylanPortfolio.io/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/unreal.png": "/DylanPortfolio.io/static/media/unreal.7e8c0b5f7e607bcd04a4.png",
+    "static/media/ScapeLogo.png": "/DylanPortfolio.io/static/media/ScapeLogo.e371c4d94aa602a8b821.png",
     "static/media/DylanOcampo.png": "/DylanPortfolio.io/static/media/DylanOcampo.d29f8adec54dda3db432.png",
     "static/media/Yucatani6.jpg": "/DylanPortfolio.io/static/media/Yucatani6.4ffaea10bc9a18c8cc6d.jpg",
     "static/media/VicenteFernandez.jpg": "/DylanPortfolio.io/static/media/VicenteFernandez.f21a6b0058c1fd3133e6.jpg",
@@ -34,15 +37,16 @@
     "static/media/javascript.png": "/DylanPortfolio.io/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/revicons.woff": "/DylanPortfolio.io/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/Logo_Files.svg": "/DylanPortfolio.io/static/media/Logo_Files.a9b8fa5e33187615b5a8f3a3c4f17f9f.svg",
+    "static/media/MovieLogo.svg": "/DylanPortfolio.io/static/media/MovieLogo.bb8aa703cb92c9aa31fc1e0b17850ed9.svg",
     "index.html": "/DylanPortfolio.io/index.html",
     "static/media/nav-icon2.svg": "/DylanPortfolio.io/static/media/nav-icon2.7d4d05418d90c543e56e59ee30f8c324.svg",
     "static/media/nav-icon1.svg": "/DylanPortfolio.io/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "main.1be0590e.css.map": "/DylanPortfolio.io/static/css/main.1be0590e.css.map",
-    "main.7bfd7bbb.js.map": "/DylanPortfolio.io/static/js/main.7bfd7bbb.js.map",
+    "main.4d2976b8.js.map": "/DylanPortfolio.io/static/js/main.4d2976b8.js.map",
     "453.b21437c2.chunk.js.map": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1be0590e.css",
-    "static/js/main.7bfd7bbb.js"
+    "static/js/main.4d2976b8.js"
   ]
 }
