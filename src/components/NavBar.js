@@ -61,7 +61,7 @@ export const NavBar = () => {
                         type="button" 
                         onClick={(e) => {
                           e.preventDefault();
-                          window.location.href='https://drive.google.com/file/d/1FsNVaMzP1vB6j84PxqTmjQPTt89gJ2hf/view?usp=drive_link';
+                          window.location.href='https://drive.google.com/file/d/1mGZBPx25Enys2brJM1kvT1si_fG24Zxz/view?usp=sharing';
                           }}
                     > Check CV</button>
             </span>
