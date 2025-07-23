@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DylanPortfolio.io/static/css/main.1be0590e.css",
-    "main.js": "/DylanPortfolio.io/static/js/main.a19b48a0.js",
+    "main.js": "/DylanPortfolio.io/static/js/main.5ba94be5.js",
     "static/js/453.b21437c2.chunk.js": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js",
     "static/media/MovieV.gif": "/DylanPortfolio.io/static/media/MovieV.8c8f6e546fd7a2b0f165.gif",
     "static/media/Scape.gif": "/DylanPortfolio.io/static/media/Scape.db468eacc2cb2860605b.gif",
@@ -42,11 +42,11 @@
     "static/media/nav-icon2.svg": "/DylanPortfolio.io/static/media/nav-icon2.7d4d05418d90c543e56e59ee30f8c324.svg",
     "static/media/nav-icon1.svg": "/DylanPortfolio.io/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "main.1be0590e.css.map": "/DylanPortfolio.io/static/css/main.1be0590e.css.map",
-    "main.a19b48a0.js.map": "/DylanPortfolio.io/static/js/main.a19b48a0.js.map",
+    "main.5ba94be5.js.map": "/DylanPortfolio.io/static/js/main.5ba94be5.js.map",
     "453.b21437c2.chunk.js.map": "/DylanPortfolio.io/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1be0590e.css",
-    "static/js/main.a19b48a0.js"
+    "static/js/main.5ba94be5.js"
   ]
 }
