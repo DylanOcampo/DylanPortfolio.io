@@ -8,6 +8,8 @@ import { Footer } from './components/Footer';
 import { RecentProject } from './components/RecentProject';
 
 
+console.log("1.0");
+
 function App() {
   return (
     <div className="App">
