@@ -1,5 +1,4 @@
 import {BrowserView, MobileView} from 'react-device-detect';
-import ReactPlayer from 'react-player'
 import github from "../assets/img/github.png";
 import file from "../assets/img/Logo_Files.svg";
 import pitchdeck from "../assets/img/pitchdeck.png";
