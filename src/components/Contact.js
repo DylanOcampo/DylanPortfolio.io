@@ -1,95 +1,68 @@
-import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import { SiArtstation } from 'react-icons/si';
+import { TbBrandGithub, TbBrandLinkedin, TbMail } from 'react-icons/tb';
+import { profile } from '../data/content';
+import { useReveal } from '../hooks/useReveal';
+
+const CONTACT_ITEMS = [
+  { Icon: TbMail, label: profile.email, href: `mailto:${profile.email}` },
+
+];
+
+const SOCIAL_LINKS = [
+  { Icon: TbBrandLinkedin, label: 'LinkedIn', href: profile.links.linkedin },
+  { Icon: TbBrandGithub, label: 'GitHub', href: profile.links.github },
+  { Icon: SiArtstation, label: 'ArtStation', href: profile.links.artstation },
+];
 
 export const Contact = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
-
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
-  };
+  const [ref, isVisible] = useReveal();
 
   return (
-    <section className="contact" id="connect">
-      <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
-              }
-            </TrackVisibility>
-          </Col>
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
-                  <Row>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
-                    </Col>
-                    <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <button type="submit"><span>{buttonText}</span></button>
-                    </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
-                  </Row>
-                </form>
-              </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+    <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-900 to-ink-900 py-24">
+      <div
+        ref={ref}
+        className={`mx-auto max-w-4xl px-6 text-center transition-all duration-700 ${
+          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
+        <h2 className="font-display text-3xl text-white sm:text-4xl">Let&apos;s build something together</h2>
+        <p className="mx-auto mt-4 max-w-xl text-white/75">
+          Reach out directly or find me on any of the platforms below.
+        </p>
+
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+          {CONTACT_ITEMS.map(({ Icon, label, href }) =>
+            href ? (
+              <a
+                key={label}
+                href={href}
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur transition hover:border-white/50 hover:bg-white/20"
+              >
+                <Icon className="h-4 w-4" /> {label}
+              </a>
+            ) : (
+              <span key={label} className="inline-flex items-center gap-2 text-sm font-medium text-white/80">
+                <Icon className="h-4 w-4" /> {label}
+              </span>
+            ),
+          )}
+        </div>
+
+        <div className="mt-8 flex items-center justify-center gap-4">
+          {SOCIAL_LINKS.map(({ Icon, label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition hover:border-white hover:bg-white hover:text-brand-700"
+            >
+              <Icon className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};

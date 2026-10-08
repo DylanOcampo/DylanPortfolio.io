@@ -1,50 +1,43 @@
-import {BrowserView, MobileView} from 'react-device-detect';
-import { Container, Row, Col } from "react-bootstrap";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import logo from '../assets/img/DylanOcampo.png';
+import { SiArtstation } from 'react-icons/si';
+import { TbBrandGithub, TbBrandLinkedin } from 'react-icons/tb';
+import GradientText from './GradientText';
+import { profile } from '../data/content';
 
-export const Footer = () => {
-  return (
-    <footer  style={{marginTop: 10}}>
-      <BrowserView><Container>
-        <Row  >
-          
-          <Col >
-            <img src={logo} alt="Logo" style={{ width: '75%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20}} />
-          </Col>
-          
-          <Col >
-            
-          </Col>
+const SOCIAL_LINKS = [
+  { Icon: TbBrandLinkedin, label: 'LinkedIn', href: profile.links.linkedin },
+  { Icon: TbBrandGithub, label: 'GitHub', href: profile.links.github },
+  { Icon: SiArtstation, label: 'ArtStation', href: profile.links.artstation },
+];
 
-          <Col   className="text-center text-sm-end" style={{paddingTop: 10}}>
-            <div className="social-icon">
-              <a href="https://www.linkedin.com/in/dylan-ocampo-1849b3240/"><img src={navIcon1} alt="Icon" /></a>
-              <a href="https://www.artstation.com/dylan-ocampo"><img src={navIcon2} alt="Icon" /></a>
-            </div>
-            <p style ={{paddingTop: 10}}>Copyright 2022. All Rights Reserved</p>
-          </Col>
-          
-        </Row>
-        
-      </Container></BrowserView>
+export const Footer = () => (
+  <footer className="border-t border-white/10 bg-ink-900 py-10">
+    <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:justify-between sm:text-left">
+      <a href="#home" aria-label="Dylan Ocampo — home" className="flex items-center gap-2">
+        <GradientText
+          colors={['#0b3c92', '#1261e1', '#80b2f0']}
+          animationSpeed={6}
+          className="font-display text-base tracking-wide"
+        >
+          DYLAN OCAMPO
+        </GradientText>
+      </a>
 
-      <MobileView>
-          <Col >
-            <img src={logo} alt="Logo" style={{ width: '100%', height: 'auto', justifyContent: 'center', alignItems: 'center', marginBottom: 20, paddingLeft: 5}} />
-          </Col>
+      <div className="flex items-center gap-3">
+        {SOCIAL_LINKS.map(({ Icon, label, href }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-brand-400 hover:text-brand-300"
+          >
+            <Icon className="h-4 w-4" />
+          </a>
+        ))}
+      </div>
 
-          <Col   className="text-center text-sm-end" style={{paddingTop: 10}}>
-            <div className="social-icon">
-              <a href="https://www.linkedin.com/in/dylan-ocampo-1849b3240/"><img src={navIcon1} alt="Icon" /></a>
-              <a href="https://www.artstation.com/dylan-ocampo"><img src={navIcon2} alt="Icon" /></a>
-            </div>
-            <p style ={{paddingTop: 10}}>Copyright 2022. All Rights Reserved</p>
-          </Col>
-
-      </MobileView>
-      
-    </footer>
-  )
-}
+      <p className="text-xs text-white/40">Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
+    </div>
+  </footer>
+);
